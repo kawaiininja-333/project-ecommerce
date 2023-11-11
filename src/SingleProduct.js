@@ -17,6 +17,7 @@ function SinglrProduct(props) {
 
   useEffect(() => {
     getUsers();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const email = localStorage.getItem("email");
@@ -86,7 +87,7 @@ function SinglrProduct(props) {
   } else {
     return (
       <>
-      {/* Close Image Privew*/}
+        {/* Close Image Privew*/}
         <div className="buttonDisplayNone">
           <button onClick={handelClick} className={classnames}>
             X

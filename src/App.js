@@ -5,7 +5,6 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import useToken from "./components/useToken";
 // pages
-import ProductTab from "./NotINUseProductTab";
 import SinglrProduct from "./SingleProduct";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
@@ -27,14 +26,13 @@ function App() {
 
   const { token, removeToken, setToken } = useToken();
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/project-ecommerce">
       {!token || token === "" || token === undefined ? (
         <Routes>
-          <Route path="/product/:id/detail" element={<ProductTab />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/product/:id/detail" element={<SinglrProduct />} />
           <Route path="/login" element={<Login setToken={setToken} />} />
           <Route path="/signup" element={<Signup removeToken={removeToken} />} />
-          <Route path="/" element={<Home />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="/category" element={<Product />} /> {/*from src not in components*/}
           <Route path="/product/:id/:name/:ModelName/in=view/detail" element={<ShowSingleProduct token={token} />} /> {/* SingleProductMain*/}
@@ -42,11 +40,10 @@ function App() {
       ) : (
         <>
           <Routes>
+            <Route exact path="/" element={<Home />} />
             <Route path="*" element={<ErrorPage />} />
-            <Route path="/" element={<Home />} />
             <Route path="/category" element={<Product />} /> {/*from src not in components*/}
-            <Route exact path="/setting" element={<Settings />} />
-            <Route path="/product/:id/:name/detail" element={<ProductTab token={token} />} />
+            <Route path="/setting" element={<Settings />} />
             <Route path="/product/:id/:name/:ModelName/in=view/detail" element={<ShowSingleProduct token={token} setToken={setToken} />} /> {/* SingleProductMain*/}
             <Route path="/cart" element={<Cart />} />
             <Route path="/purchese/:id/:email/checkout" element={<Checkout />} />
