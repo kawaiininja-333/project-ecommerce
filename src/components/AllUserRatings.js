@@ -28,6 +28,7 @@ function AllUserRatings() {
   };
   useEffect(() => {
     getProductsRatings();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [product_id]);
 
   function getProductsRatings() {
@@ -103,7 +104,4 @@ const customStyle = {
 const customStyle_A = {
   paddingTop: "30px",
   paddingBottom: "30px",
-};
-const customStyle_B = {
-  display: "none",
 };

@@ -1,5 +1,5 @@
 // userrating.js
-import React, { useEffect, useState, Component } from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import { useNavigate, useParams } from "react-router-dom";

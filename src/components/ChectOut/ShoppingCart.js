@@ -45,6 +45,7 @@ function ShoppingCart({ user_email, phone }) {
   if (DeleveryCharges > 0) {
     total = price * quantity + DeleveryCharges;
   } else {
+    // eslint-disable-next-line no-unused-vars
     total = quantity * price;
   }
   const handleSelectedAddress = (selectedAddressData) => {

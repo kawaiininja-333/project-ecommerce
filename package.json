@@ -1,8 +1,8 @@
 {
   "name": "e-commerces",
-  "homepage": "https://kawaiininja-333.github.io/project-ecommerce",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
+  "homepage": "http://kawaiininja.synergize.co/build/",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -28,8 +28,6 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.0.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

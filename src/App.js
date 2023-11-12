@@ -26,7 +26,7 @@ function App() {
 
   const { token, removeToken, setToken } = useToken();
   return (
-    <BrowserRouter basename="/project-ecommerce">
+    <BrowserRouter>
       {!token || token === "" || token === undefined ? (
         <Routes>
           <Route exact path="/" element={<Home />} />

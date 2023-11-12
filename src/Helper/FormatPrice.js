@@ -1,4 +1,3 @@
-import React from "react";
 
 const FormatPrice = ({ price, currency }) => {
   // Define an object to map currency codes to their respective currency display names.

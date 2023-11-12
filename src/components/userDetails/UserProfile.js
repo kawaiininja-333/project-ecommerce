@@ -7,6 +7,7 @@ function UserProfile(props) {
 
   useEffect(() => {
     getUsers();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const email = localStorage.getItem("email");

@@ -7,6 +7,7 @@ function AddressStorage({ phone, onSelectAddress, getselectedAddress }) {
 
   useEffect(() => {
     get_user_address();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [email]);
 
   function get_user_address() {
